@@ -73,7 +73,8 @@ static GLfloat yEyePosition = kSGMeter * 1.7018f;
 
 - (id) init
 {
-    if(self = [super init]) {
+    self = [super init];
+    if(self) {
         responders = [[NSMutableArray alloc] init];
 
         locationManager = [[CLLocationManager alloc] init];

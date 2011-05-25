@@ -315,8 +315,10 @@
 				4ABE1D811242AA48002F42EC /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
+			indentWidth = 4;
 			name = SGARView;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		4A0418E1124065A200C93E1B /* Tests */ = {
 			isa = PBXGroup;

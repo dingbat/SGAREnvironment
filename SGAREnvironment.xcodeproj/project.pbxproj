@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		478C6035138D601000E299E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */; };
+		478C6036138D601100E299E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DC81242B1AA002F42EC /* UIKit.framework */; };
+		478C6037138D601100E299E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DAF1242B189002F42EC /* Foundation.framework */; };
+		478C6038138D601100E299E1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DA91242B173002F42EC /* AVFoundation.framework */; };
+		478C6039138D601100E299E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DAD1242B189002F42EC /* CoreLocation.framework */; };
+		478C603A138D601100E299E1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DB11242B189002F42EC /* OpenGLES.framework */; };
+		478C603B138D601100E299E1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DC61242B1AA002F42EC /* QuartzCore.framework */; };
 		4A022F601226200E0063BCED /* SGGlassAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */; };
 		4A022F611226200E0063BCED /* SGGlassAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */; };
 		4A0418E4124065B600C93E1B /* SGBearingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0418E3124065B600C93E1B /* SGBearingTest.m */; };
@@ -85,10 +92,7 @@
 		4ABE1DC71242B1AA002F42EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DC61242B1AA002F42EC /* QuartzCore.framework */; };
 		4ABE1DC91242B1AA002F42EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DC81242B1AA002F42EC /* UIKit.framework */; };
 		4AEDBA841121F32D003C1949 /* SGAREnvironment.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AEDBA831121F32D003C1949 /* SGAREnvironment.h */; };
-		5D7290EC12E0EF1B00DCA295 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290EB12E0EF1B00DCA295 /* OpenGLES.framework */; };
 		5D7290F012E0EF2C00DCA295 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */; };
-		5D7290F412E0EF3D00DCA295 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */; };
-		5D72915812E0EF8700DCA295 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D72915712E0EF8700DCA295 /* QuartzCore.framework */; };
 		5D72919712E0F19D00DCA295 /* AccelerometerFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722FA91198C3B50078ABCE /* AccelerometerFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D72919812E0F19D00DCA295 /* CLLocationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A476AF911619D960066F747 /* CLLocationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D72919912E0F19D00DCA295 /* GLU+iPhone.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A722F5D1198BFF80078ABCE /* GLU+iPhone.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -217,7 +221,7 @@
 		4A64A4821120964700D4E22D /* SGMovableStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMovableStack.m; sourceTree = "<group>"; };
 		4A64A4831120964700D4E22D /* SGRadar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGRadar.h; sourceTree = "<group>"; };
 		4A64A4841120964700D4E22D /* SGRadar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGRadar.m; sourceTree = "<group>"; };
-		4A64A4851120964700D4E22D /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		4A64A4851120964700D4E22D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4A64A4881120964700D4E22D /* LeftButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftButton.png; sourceTree = "<group>"; };
 		4A64A4891120964700D4E22D /* RightButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RightButton.png; sourceTree = "<group>"; };
 		4A64A48A1120964700D4E22D /* SGBluePin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SGBluePin.png; sourceTree = "<group>"; };
@@ -249,11 +253,7 @@
 		4ABE1DC81242B1AA002F42EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4AEDBA831121F32D003C1949 /* SGAREnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAREnvironment.h; sourceTree = "<group>"; };
 		4AF85B3711A5E7F500B97ADA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		5D7290EB12E0EF1B00DCA295 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		5D7290F712E0EF5B00DCA295 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5D72915712E0EF8700DCA295 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5D72916612E0F0AF00DCA295 /* SimpleGeoAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleGeoAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D72916712E0F0AF00DCA295 /* SimpleGeoAR-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleGeoAR-Info.plist"; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libSGAREnvironment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSGAREnvironment.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,10 +264,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D7290EC12E0EF1B00DCA295 /* OpenGLES.framework in Frameworks */,
 				5D7290F012E0EF2C00DCA295 /* CoreGraphics.framework in Frameworks */,
-				5D7290F412E0EF3D00DCA295 /* CoreLocation.framework in Frameworks */,
-				5D72915812E0EF8700DCA295 /* QuartzCore.framework in Frameworks */,
+				478C6036138D601100E299E1 /* UIKit.framework in Frameworks */,
+				478C6037138D601100E299E1 /* Foundation.framework in Frameworks */,
+				478C6038138D601100E299E1 /* AVFoundation.framework in Frameworks */,
+				478C6039138D601100E299E1 /* CoreLocation.framework in Frameworks */,
+				478C603A138D601100E299E1 /* OpenGLES.framework in Frameworks */,
+				478C603B138D601100E299E1 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +284,7 @@
 				4ABE1DB21242B189002F42EC /* OpenGLES.framework in Frameworks */,
 				4ABE1DC71242B1AA002F42EC /* QuartzCore.framework in Frameworks */,
 				4ABE1DC91242B1AA002F42EC /* UIKit.framework in Frameworks */,
+				478C6035138D601000E299E1 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,21 +304,16 @@
 		0867D691FE84028FC02AAC07 /* SGARView */ = {
 			isa = PBXGroup;
 			children = (
-				4ABE1D811242AA48002F42EC /* Frameworks */,
-				4A0418E1124065A200C93E1B /* Tests */,
-				4A7551E711DBD24D003E8D8A /* build_dist */,
 				4A64A4531120964700D4E22D /* Classes */,
-				4A64A4851120964700D4E22D /* README */,
+				4A0418E1124065A200C93E1B /* Tests */,
 				4A64A4861120964700D4E22D /* Resources */,
-				034768DFFF38A50411DB9C8B /* Products */,
-				4AF85B3711A5E7F500B97ADA /* LICENSE */,
 				4A0418C41240642E00C93E1B /* SGAREnvironmentTests-Info.plist */,
 				5D72916712E0F0AF00DCA295 /* SimpleGeoAR-Info.plist */,
-				5D7290EB12E0EF1B00DCA295 /* OpenGLES.framework */,
-				5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */,
-				5D7290F312E0EF3D00DCA295 /* CoreLocation.framework */,
-				5D7290F712E0EF5B00DCA295 /* UIKit.framework */,
-				5D72915712E0EF8700DCA295 /* QuartzCore.framework */,
+				4A64A4851120964700D4E22D /* README.md */,
+				4AF85B3711A5E7F500B97ADA /* LICENSE */,
+				4A7551E711DBD24D003E8D8A /* build_dist */,
+				4ABE1D811242AA48002F42EC /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
 			);
 			name = SGARView;
 			sourceTree = "<group>";
@@ -454,12 +453,13 @@
 		4ABE1D811242AA48002F42EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4ABE1DC81242B1AA002F42EC /* UIKit.framework */,
+				5D7290EF12E0EF2C00DCA295 /* CoreGraphics.framework */,
+				4ABE1DAF1242B189002F42EC /* Foundation.framework */,
 				4ABE1DA91242B173002F42EC /* AVFoundation.framework */,
 				4ABE1DAD1242B189002F42EC /* CoreLocation.framework */,
-				4ABE1DAF1242B189002F42EC /* Foundation.framework */,
 				4ABE1DB11242B189002F42EC /* OpenGLES.framework */,
 				4ABE1DC61242B1AA002F42EC /* QuartzCore.framework */,
-				4ABE1DC81242B1AA002F42EC /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

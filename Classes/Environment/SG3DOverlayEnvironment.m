@@ -233,30 +233,25 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 {
     SGLog(@"SGGesture - Single tap at %f,%f", point.x, point.y);
     
-    UIView* inspectedView = nil;
     // Chrome manager gets first dibs on touch events
     if(![arView hitTestAtPoint:point withEvent:kSGControlEvent_Touch]) {
-        if(!inspectedView) {
-            SGAnnotationView* closestView = [self closestAnnotationViewForPoint:point];
-            if(closestView && closestView.distance <= kSGSphere_Radius) {
-                selectedView = closestView;
-                if(closestView.delegate && [closestView.delegate respondsToSelector:@selector(shouldInspectAnnotationView:)]) {
-                    UIView* viewToInspect = [closestView.delegate shouldInspectAnnotationView:closestView];
-                    if(viewToInspect) {
-                        if([viewToInspect isKindOfClass:[SGAnnotationView class]]) {
-                            viewToInspect.hidden = NO;
-                            ((SGAnnotationView*)viewToInspect).isCaptured = YES;
-                        } 
-                    
-                        [arView addSubview:viewToInspect];
-                        inspectedView = viewToInspect;
-                    } else {
-                        // No inspection was declared
-                        inspectedView = nil;
+        SGAnnotationView* closestView = [self closestAnnotationViewForPoint:point];
+        if(closestView && closestView.distance <= kSGSphere_Radius) {
+            selectedView = closestView;
+            if(closestView.delegate && [closestView.delegate respondsToSelector:@selector(shouldInspectAnnotationView:)]) {
+                UIView* viewToInspect = [closestView.delegate shouldInspectAnnotationView:closestView];
+                if(viewToInspect) {
+                    if([viewToInspect isKindOfClass:[SGAnnotationView class]]) {
+                        viewToInspect.hidden = NO;
+                        ((SGAnnotationView*)viewToInspect).isCaptured = YES;
                     }
+
+                    [arView addSubview:viewToInspect];
+                } else {
+                    // No inspection was declared
                 }
-            }         
-        }  
+            }
+        }
     
         for(id<SGARResponder> responder in responders)
             if([responder respondsToSelector:@selector(ARSingleTap:)])

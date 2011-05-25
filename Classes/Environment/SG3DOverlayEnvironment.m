@@ -171,7 +171,11 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) cleanUp
 {
+    [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
+
     fovy = 0.0f;
+
+    [locationManager stopUpdatingLocation];
     [locationManager stopUpdatingHeading];
     locationManager.delegate = nil;
 }

@@ -37,6 +37,7 @@
 
 @class SGAnnotationView;
 @class SGARView;
+@class CMMotionManager;
 
 /*!
 * @class SG3DOverlayEnvironment
@@ -67,7 +68,8 @@
     
     @private
     LowpassFilter* filter;
-    
+    CMMotionManager* motionManager;
+
     // These are determined using a combination of the compass
     // signal and the accelormeter signals.
     double pitch;

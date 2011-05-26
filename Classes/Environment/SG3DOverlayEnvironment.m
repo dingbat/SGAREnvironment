@@ -32,6 +32,7 @@
 //  Created by Derek Smith.
 //
 
+#import <CoreMotion/CoreMotion.h>
 #import "SGARView.h"
 #import "SGAnnotationView.h"
 #import "SGRadar.h"
@@ -79,6 +80,8 @@ static GLfloat yEyePosition = kSGMeter * 1.7018f;
 
         locationManager = [[CLLocationManager alloc] init];
         locationManager.delegate = self;
+        
+        motionManager = [[CMMotionManager alloc] init];
             
         currentLocation = nil;
         filter = [[LowpassFilter alloc] initWithSampleRate:kAccelerometer_Rate cutoffFrequency:1.5];
@@ -157,8 +160,17 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) initiate
 {
-    [[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / kAccelerometer_Rate)];
-	[[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    // If we have a gyroscope, use CoreMotion to obtain already processed 
+    // (greater accuracy) orientation measures. Otherwise, use UIAccelerometer.
+    if ([motionManager isDeviceMotionAvailable])
+    {
+        [motionManager startDeviceMotionUpdates];
+    }
+    else
+    {
+        [[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / kAccelerometer_Rate)];
+        [[UIAccelerometer sharedAccelerometer] setDelegate:self];
+    }
     
     fovy = 65.0f;
     
@@ -171,6 +183,8 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) cleanUp
 {
+    // We don't care which system it's being used to gather motion updates, just stop both
+    [motionManager stopDeviceMotionUpdates];
     [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
 
     fovy = 0.0f;
@@ -206,6 +220,15 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) drawView:(SG3DOverlayView*)view
 {
+    // Gather new motion data if available
+    if ([motionManager isDeviceMotionAvailable] && [motionManager isDeviceMotionActive])
+    {
+        CMDeviceMotion *motion = [motionManager deviceMotion];
+        pitch = motion.gravity.z;
+        roll  = motion.gravity.x;
+        yaw   = motion.gravity.y;
+    }
+    
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
         
@@ -382,6 +405,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 #pragma mark -
 #pragma mark UIAccelerometer delegate methods
 
+// Attention: this method won't be called if the device has a gyroscope
 - (void) accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)acceleration
 {
     double kAccelerationThreshold = 2.2;
@@ -637,6 +661,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) dealloc
 {
+    [motionManager release];
     [locationManager release];
     [responders release];
     [arView release];

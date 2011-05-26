@@ -13,7 +13,7 @@ the following steps somewhat.
 1. Run ./build_dist
 2. Add /path/to/SGAREnvironment-v*.*.*/Headers to the "Header Search Paths" setting.
 3. Add /path/to/SGAREnvironment-v*.*.*/$(PLATFORM_NAME) to "Library Search Paths" setting.
-4. Add the following frameworks: OpenGLES, MapKit, CoreLocation, CoreGraphics, QuartzCore, UIKit, AVFoundation and Foundation.
+4. Add the following frameworks: OpenGLES, MapKit, CoreLocation, CoreMotion, CoreGraphics, QuartzCore, UIKit, AVFoundation and Foundation.
 5. Go to your target's info and add "-all_load -ObjC -l SGAREnvironment" to the "Other Linker Flags" setting under the Build tag. This will inform the linker to load the categories from the static library.
 6. Import SGAREnvironment.h in your pre-compiled header file or wherever you plan on accessing the library.
 
@@ -32,6 +32,7 @@ Frameworks:
 * QuartzCore
 * UIKit
 * AVFoundation
+* CoreMotion
 
 ## PACKING LIST
 

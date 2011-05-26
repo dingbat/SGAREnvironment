@@ -14,6 +14,8 @@
 		478C6039138D601100E299E1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DAD1242B189002F42EC /* CoreLocation.framework */; };
 		478C603A138D601100E299E1 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DB11242B189002F42EC /* OpenGLES.framework */; };
 		478C603B138D601100E299E1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABE1DC61242B1AA002F42EC /* QuartzCore.framework */; };
+		478C605B138DB91200E299E1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478C605A138DB91200E299E1 /* CoreMotion.framework */; };
+		478C605C138DB91F00E299E1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478C605A138DB91200E299E1 /* CoreMotion.framework */; };
 		4A022F601226200E0063BCED /* SGGlassAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */; };
 		4A022F611226200E0063BCED /* SGGlassAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */; };
 		4A0418E4124065B600C93E1B /* SGBearingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A0418E3124065B600C93E1B /* SGBearingTest.m */; };
@@ -187,6 +189,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		478C605A138DB91200E299E1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		4A022F5E1226200E0063BCED /* SGGlassAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGlassAnnotationView.m; sourceTree = "<group>"; };
 		4A022F5F1226200E0063BCED /* SGGlassAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGlassAnnotationView.h; sourceTree = "<group>"; };
 		4A0418C31240642E00C93E1B /* SGAREnvironmentTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SGAREnvironmentTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,6 +274,7 @@
 				478C6039138D601100E299E1 /* CoreLocation.framework in Frameworks */,
 				478C603A138D601100E299E1 /* OpenGLES.framework in Frameworks */,
 				478C603B138D601100E299E1 /* QuartzCore.framework in Frameworks */,
+				478C605C138DB91F00E299E1 /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				478C605B138DB91200E299E1 /* CoreMotion.framework in Frameworks */,
 				4ABE1DAA1242B173002F42EC /* AVFoundation.framework in Frameworks */,
 				4ABE1DAE1242B189002F42EC /* CoreLocation.framework in Frameworks */,
 				4ABE1DB01242B189002F42EC /* Foundation.framework in Frameworks */,
@@ -462,6 +467,7 @@
 				4ABE1DAD1242B189002F42EC /* CoreLocation.framework */,
 				4ABE1DB11242B189002F42EC /* OpenGLES.framework */,
 				4ABE1DC61242B1AA002F42EC /* QuartzCore.framework */,
+				478C605A138DB91200E299E1 /* CoreMotion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

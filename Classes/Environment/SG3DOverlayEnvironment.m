@@ -183,7 +183,7 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
 
 - (void) cleanUp
 {
-    // We don't care which system it's being used to gather motion updates, just stop both
+    // We don't care which system is being used to gather motion updates, just stop both
     [motionManager stopDeviceMotionUpdates];
     [[UIAccelerometer sharedAccelerometer] setDelegate:nil];
 

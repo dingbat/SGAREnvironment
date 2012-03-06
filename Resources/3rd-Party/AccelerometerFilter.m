@@ -70,12 +70,12 @@
 #define kAccelerometerMinStep				0.02
 #define kAccelerometerNoiseAttenuation		3.0
 
-double Norm(double x, double y, double z)
+static double Norm(double x, double y, double z)
 {
 	return sqrt(x * x + y * y + z * z);
 }
 
-double Clamp(double v, double min, double max)
+static double Clamp(double v, double min, double max)
 {
 	if(v > max)
 		return max;

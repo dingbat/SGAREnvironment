@@ -296,7 +296,7 @@ invert_matrix(const GLfloat * m, GLfloat * out)
 #undef SWAP_ROWS
 }
 
-void __gluMakeIdentityf(GLfloat m[16])
+static void __gluMakeIdentityf(GLfloat m[16])
 {
     m[0+4*0] = 1; m[0+4*1] = 0; m[0+4*2] = 0; m[0+4*3] = 0;
     m[1+4*0] = 0; m[1+4*1] = 1; m[1+4*2] = 0; m[1+4*3] = 0;

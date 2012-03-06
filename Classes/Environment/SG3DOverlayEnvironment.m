@@ -110,7 +110,7 @@ static GLfloat yEyePosition = kSGMeter * 1.7018f;
 #pragma mark -
 #pragma mark Sort functions  
 
-int sortRecordByDistance(id view1, id view2, void* blah) {
+static int sortRecordByDistance(id view1, id view2, void* blah) {
 	SGAnnotationView* v1 = (SGAnnotationView*)view1;
 	SGAnnotationView* v2 = (SGAnnotationView*)view2;
     

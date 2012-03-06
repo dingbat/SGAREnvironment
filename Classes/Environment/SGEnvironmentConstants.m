@@ -32,13 +32,15 @@
 //  Created by Derek Smith.
 //
 
+void SGInitializeEnvironmentSettings(void);
+
 #import "SGEnvironmentConstants.h"
 
 #import "SGMetrics.h"
 
 float kSGEnvironment_ViewingRadius, kSGSphere_Radius, kSGAnnotation_MaximumDistance, kSGAnnotation_MinimumDistance;
 
-void SGInitializeEnvironmentSettings() {
+void SGInitializeEnvironmentSettings(void) {
     SGSetEnvironmentViewingRadius(100.0f);
     SGSetEnvironmentMaximumAnnotationDistance(100.0f);
     SGSetEnvironmentMinimumAnnotationDistance(10.0f);    

@@ -48,9 +48,11 @@
 
 - (void) setPinColor:(SGPinColor)newPinColor
 {
+	pinColor = newPinColor;
+	
     if(pinColor == kSGPinColor_Red)
         targetImageView.image = [UIImage imageNamed:@"SGRedPin.png"];                
-    else if(pinColor = kSGPinColor_Blue)
+    else if(pinColor == kSGPinColor_Blue)
         targetImageView.image = [UIImage imageNamed:@"SGBluePin.png"];
     
     self.frame = CGRectMake(self.frame.origin.x,

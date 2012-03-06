@@ -87,7 +87,7 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 
 + (UIImage*) roundedImageWithImage:(UIImage*)img cornerWidth:(int)width cornerHeight:(int)height scaleSize:(CGSize)size
 {
-    img = [[UIImage imageWithImage:img scaledToSize:size] retain];
+    img = [UIImage imageWithImage:img scaledToSize:size];
     
 	int w = img.size.width;
 	int h = img.size.height;
@@ -106,7 +106,6 @@ static void addRoundedRectToPath(CGContextRef context, CGRect rect, float ovalWi
 	CGImageRef imageMasked = CGBitmapContextCreateImage(context);
 	CGContextRelease(context);
 	CGColorSpaceRelease(colorSpace);
-	[img release];
 	
 	UIImage* image = [UIImage imageWithCGImage:imageMasked];
 	

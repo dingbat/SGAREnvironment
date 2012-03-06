@@ -46,6 +46,6 @@
 * @property
 * @abstract The color of the heading view.
 */
-@property (nonatomic, retain) UIColor* headingViewColor;
+@property (nonatomic, strong) UIColor* headingViewColor;
 
 @end

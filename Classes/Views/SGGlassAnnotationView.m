@@ -64,7 +64,7 @@
 
 - (void) createObjectSubviews
 {        
-    closeButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+    closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage* closeImage = [UIImage imageNamed:@"SGCloseButton.png"];
     [closeButton setImage:closeImage forState:UIControlStateNormal];
     closeButton.frame = CGRectMake(-5.0,
@@ -288,19 +288,5 @@
     photoImageView.frame = CGRectZero;
 }
 
-- (void) dealloc
-{
-    [detailedLabel release]; 
-    [titleLabel release];
-    [backgroundImageView release];
-    [topExpandedBGImageView release];
-    [middleExpandedBGImageView release];
-    [bottomExpandedBGImageView release];
-    [photoImageView release];
-    [closeButton release];
-    [messageLabel release];    
-    
-    [super dealloc];
-}
 
 @end

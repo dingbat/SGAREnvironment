@@ -62,7 +62,7 @@
 * @property
 * @abstract The @link //simplegeo/ooc/cl/SGARView SGARView @/link that controls the container.
 */
-@property (nonatomic, assign) SGARView* arView;
+@property (nonatomic, strong) SGARView* arView;
 
 /*!
  * @property
@@ -70,7 +70,7 @@
  * @discussion Setting this property will resize the container to the size
  * of the image. If nil is passed, then the size will stay the same.
  */
-@property (nonatomic, retain) UIImage* normalImage;
+@property (nonatomic, strong) UIImage* normalImage;
 
 /*!
  * @property
@@ -79,7 +79,7 @@
  * event, it will present this image. Set this proper to nil if you do not wish to have 
  * the container highlighted.
  */
-@property (nonatomic, retain) UIImage* highlightedImage;
+@property (nonatomic, strong) UIImage* highlightedImage;
 
 /*!
 * @method addRecordAnnotationViews:

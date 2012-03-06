@@ -43,7 +43,7 @@
 - (id) initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        headingViewColor = [[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.7] retain];
+        headingViewColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.7];
         self.backgroundColor = [UIColor clearColor];
     }
     
@@ -64,11 +64,5 @@
     CGContextFillPath(contextRef);    
 }
 
-- (void)dealloc 
-{
-    [headingViewColor release];
-    
-    [super dealloc];
-}
 
 @end

@@ -65,7 +65,7 @@
 * @property
 * @abstract The @link //simplegeo/ooc/cl/SGARView SGARView @/link that owns the movable stack. 
 */
-@property (nonatomic, retain) UIView* arView;
+@property (nonatomic, strong) UIView* arView;
 
 /*!
 * @method addAnnotationView:

@@ -115,12 +115,5 @@
 }
 
 
-- (void) dealloc
-{
-    [movableStack release];
-    [arView release];
-    
-    [super dealloc];
-}
 
 @end

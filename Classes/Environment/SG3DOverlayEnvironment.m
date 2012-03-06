@@ -426,10 +426,8 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
  
 - (void) locationManager:(CLLocationManager*)manager didUpdateToLocation:(CLLocation*)newLocation fromLocation:(CLLocation*)oldLocation
 {
-    if(currentLocation)
-        [currentLocation release];
     
-    currentLocation = [newLocation retain];
+    currentLocation = newLocation;
 }
 
 - (void) locationManager:(CLLocationManager*)manager didFailWithError:(NSError*)error
@@ -654,23 +652,9 @@ int sortRecordByDistance(id view1, id view2, void* blah) {
     else if(distance < kSGAnnotation_MinimumDistance)
         distance = kSGAnnotation_MinimumDistance;
     
-    [viewLocation release];
     
     return distance;
 }
 
-- (void) dealloc
-{
-    [motionManager release];
-    [locationManager release];
-    [responders release];
-    [arView release];
-    [filter release];
-    [currentLocation release];
-    [annotationViews release];
-    [containers release];
-        
-    [super dealloc];
-}
 
 @end

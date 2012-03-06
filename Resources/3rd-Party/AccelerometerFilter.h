@@ -62,7 +62,8 @@
 @property(nonatomic, readonly) UIAccelerationValue z;
 
 @property(nonatomic, getter=isAdaptive) BOOL adaptive;
-@property(nonatomic, readonly) NSString *name;
+
+- (NSString *) name;
 
 @end
 

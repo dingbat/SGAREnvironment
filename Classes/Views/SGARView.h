@@ -77,9 +77,7 @@ typedef NSUInteger SGChromeComponent;
 * for the annotations and their corresponding views.
 */
 @interface SGARView : UIView
-{
-    id<SGARViewDataSource> dataSource;
- 
+{ 
     CLLocationManager* locationManager;
  
     SGRadar* radar;
@@ -121,7 +119,7 @@ typedef NSUInteger SGChromeComponent;
 * @property
 * @abstract See @link SGARViewDataSource data source @/link
 */
-@property (nonatomic, assign) id<SGARViewDataSource> dataSource;
+@property (nonatomic, unsafe_unretained) id<SGARViewDataSource> dataSource;
 
 /*!
 * @property
@@ -133,7 +131,7 @@ typedef NSUInteger SGChromeComponent;
 * @property
 * @abstract The @link //simplegeo/ooc/cl/SGRadar radar @/link that is associated with the AR view.
 */
-@property (nonatomic, retain) SGRadar* radar;
+@property (nonatomic, strong) SGRadar* radar;
 
 /*!
 * @property
@@ -158,7 +156,7 @@ typedef NSUInteger SGChromeComponent;
 * @property
 * @abstract The color of the grid lines.
 */
-@property (nonatomic, retain) UIColor* gridLineColor;
+@property (nonatomic, strong) UIColor* gridLineColor;
 
 /*!
 * @property
@@ -167,7 +165,7 @@ typedef NSUInteger SGChromeComponent;
 * @discussion If a movable to stack is present, it will be added as a subview of @link //simplegeo/ooc/cl/SGARView SGARView @/link. Set
 * this property to nil in order to not allow views to be collected.
 */
-@property (nonatomic, retain) SGMovableStack* movableStack;
+@property (nonatomic, strong) SGMovableStack* movableStack;
 
 /*!
 * @property

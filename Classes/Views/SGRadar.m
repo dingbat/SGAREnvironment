@@ -68,8 +68,8 @@
         
         cardinalDirectionOffset = 5.0;
         
-        radarBorderColor = [[UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7] retain];
-        radarCircleColor = [[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7] retain];
+        radarBorderColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:0.7];
+        radarCircleColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
         
         annotationViews = [[NSMutableArray alloc] init];
         
@@ -307,18 +307,5 @@
 }
 
 
-- (void) dealloc
-{
-    [currentLocationImageView release];
-    [headingImageView release];
-    [radarBackgroundImageView release];
-    [radarBorderColor release];
-    [radarCircleColor release];
-    [headingColor release];
-    [annotationViews release];
-    [cardinalLabels release];
-    [headingView release];
-    [super dealloc];
-}
 
 @end

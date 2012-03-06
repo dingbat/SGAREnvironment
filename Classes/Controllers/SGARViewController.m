@@ -309,22 +309,5 @@
     
 }
 
-- (void) dealloc
-{
-    [annotations release];
-    [buckets release];
-
-#if !__IPHONE_4_0
-
-    [myNavigationItem release];
-    [myNavigationBar release];
-    [myToolbar release];
-
-#endif
-    
-    [arView release];
-        
-    [super dealloc];
-}
 
 @end

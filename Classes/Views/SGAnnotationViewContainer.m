@@ -88,10 +88,8 @@
 
 - (void) setNormalImage:(UIImage *)image
 {
-    if(normalImage)
-        [normalImage release];
     
-    normalImage = [image retain];
+    normalImage = image;
     
     if(normalImage)
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y,
@@ -136,7 +134,7 @@
     for(SGAnnotationView* view in views)
         [objects addObject:view.annotation];
     
-    return [objects autorelease];
+    return objects;
 }
 
 - (void) removeAnnotationView:(SGAnnotationView*)view
@@ -196,25 +194,14 @@
 {
     SGAnnotationView* view = nil;
     if([views count]) {
-        view = [[views objectAtIndex:0] retain];
+        view = [views objectAtIndex:0];
         [views removeObjectAtIndex:0];
         
         [self setTopImage];
-        
-        [view autorelease];
-    }
+	}
     
     return view;
 }
 
-- (void) dealloc
-{
-    [views release];
-    [images release];
-    [normalImage release];
-    [highlightedImage release];
-    
-    [super dealloc];
-}
 
 @end

@@ -54,7 +54,7 @@
  * @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectoryType_Custom @/link and
  * the view is in inspect mode.
  */
-@property (nonatomic, retain, readonly) UILabel* detailedLabel;
+@property (nonatomic, strong, readonly) UILabel* detailedLabel;
 
 /*! 
  * @property
@@ -62,7 +62,7 @@
  * in @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectorType_Custom @/link and
  * the view is in inspect mode.
  */
-@property (nonatomic, retain, readonly) UILabel* titleLabel;
+@property (nonatomic, strong, readonly) UILabel* titleLabel;
 
 /*!
  * @property
@@ -70,7 +70,7 @@
  * in @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectorType_Custom @/link and
  * the view is in inspect mode.
  */
-@property (nonatomic, retain, readonly) UILabel* messageLabel;
+@property (nonatomic, strong, readonly) UILabel* messageLabel;
 
 /*!
  * @property
@@ -78,7 +78,7 @@
  * in @link kSGAnnotationViewInspectorType_Custom kSGAnnotationViewInspectorType_Custom @/link and
  * the view is in inspect mode.
  */
-@property (nonatomic, retain, readonly) UIImageView* photoImageView;
+@property (nonatomic, strong, readonly) UIImageView* photoImageView;
 
 /*!
  * @property
@@ -87,7 +87,7 @@
  * the view is in inspect mode.
  * @discussion The default position is in the upper left-hand corner of the view.
  */
-@property (nonatomic, retain, readonly) UIButton* closeButton;
+@property (nonatomic, strong, readonly) UIButton* closeButton;
 
 /*!
  * @property

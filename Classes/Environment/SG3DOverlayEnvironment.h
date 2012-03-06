@@ -128,7 +128,7 @@
 * @abstract The @link //simplegeo/ooc/SGARView SGARView @/link that this class
 * is required to render the OpenGL environment for.
 */
-@property (nonatomic, retain) SGARView* arView;
+@property (nonatomic, strong) SGARView* arView;
 
 /*!
 * @method addAnnotationViews:

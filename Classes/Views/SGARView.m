@@ -89,7 +89,7 @@
         
         touchPoint = CGPointZero;
         
-        [self setRadar:[[[SGRadar alloc] initWithFrame:CGRectMake(10.0, 10.0, 100.0, 100.0)] autorelease]];
+        [self setRadar:[[SGRadar alloc] initWithFrame:CGRectMake(10.0, 10.0, 100.0, 100.0)]];
         
         containers = [[NSMutableArray alloc] init];
         
@@ -141,7 +141,7 @@
 
 - (AVCaptureSession*) defaultCaptureSession
 {
-    AVCaptureSession* session = [[[AVCaptureSession alloc] init] autorelease];
+    AVCaptureSession* session = [[AVCaptureSession alloc] init];
     AVCaptureDevice* videoCaptureDevice = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError* error = nil;
     AVCaptureDeviceInput* videoInput = [AVCaptureDeviceInput deviceInputWithDevice:videoCaptureDevice error:&error];
@@ -213,12 +213,8 @@
 {
     if(newRadar) {
         NSArray* views = radar.annotationViews;
-        if(radar) {
-            [radar release];
-            radar = nil;
-        }
         
-        radar = [newRadar retain];
+        radar = newRadar;
         [radar addAnnotationViews:views];
         radar.walkingOffset = walkingOffset;
         [self addSubview:radar];
@@ -259,10 +255,8 @@
 
 - (void) setMovableStack:(SGMovableStack*)ms
 {
-    if(movableStack)
-        [movableStack release];
     
-    movableStack = [ms retain];
+    movableStack = ms;
     movableStack.arView = self;
 }
 
@@ -296,7 +290,7 @@
         
         if(!viewBucket) {
             
-            viewBucket = [[[NSMutableArray alloc] init] autorelease];
+            viewBucket = [[NSMutableArray alloc] init];
             [annotationViews setObject:viewBucket forKey:view.reuseIdentifier];
             
         }
@@ -391,10 +385,9 @@
     
     NSMutableArray* nonUsedViews = [annotationViews objectForKey:viewId];
     if(nonUsedViews && [nonUsedViews count]) {
-        view = [[nonUsedViews lastObject] retain];
+        view = [nonUsedViews lastObject];
         [nonUsedViews removeLastObject];
         [view prepareForReuse];
-        [view autorelease];
     }
     
     return view;
@@ -542,29 +535,10 @@
 
 - (void) dealloc
 {
-    [locationManager release];
-    [radar release];    
-    [movableStack release];
-    [gridLineColor release];
-    [annotationViews release];    
-    [overlaySubviews release];
     [openGLOverlayView stopAnimation];
     [openGLOverlayView resignFirstResponder];
-    [openGLOverlayView release];
-    [enviornmentDrawer release];
     free(gridLines);
-    if(previousContainer)
-        [previousContainer release];
-    [containers release];
 
-#if __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0 && !TARGET_IPHONE_SIMULATOR
-
-    [cameraBackgroundLayer release];
-    [captureSession release];
-
-#endif
-
-    [super dealloc];
 }
 
 @end

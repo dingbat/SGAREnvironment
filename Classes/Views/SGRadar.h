@@ -137,26 +137,26 @@ typedef NSInteger SGCardinalDirection;
 * @property
 * @abstract The border color of the circular radar. The default RGBA value is 0.6, 0.6, 0.6, 0,7. 
 */
-@property (nonatomic, retain) UIColor* radarBorderColor;
+@property (nonatomic, strong) UIColor* radarBorderColor;
 
 /*!
 * @property
 * @abstract The color of the radar. The default RGBA value is 0.0, 0.0, 0.0, 0.7.
 */
-@property (nonatomic, retain) UIColor* radarCircleColor;
+@property (nonatomic, strong) UIColor* radarCircleColor;
 
 /*!
 * @property
 * @abstract The color of the header circular segment. The default RGBA value is 1.0, 1.0, 1.0, 0.7.
 */
-@property (nonatomic, retain) UIColor* headingColor;
+@property (nonatomic, strong) UIColor* headingColor;
 
 /*!
 * @property
 * @abstract The @link //simplegeo/ooc/cl/SGAnnotationView SGAnnotationViews @/link that
 * this radar is in charge of displaying.
 */
-@property (nonatomic, retain) NSMutableArray* annotationViews;
+@property (nonatomic, strong) NSMutableArray* annotationViews;
 
 
 /*!

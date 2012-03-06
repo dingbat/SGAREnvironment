@@ -85,7 +85,6 @@
 
 	context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
 	if(!context || ![EAGLContext setCurrentContext:context] || ![self createFramebuffer]) {
-		[self release];
 		return nil;
 	}
 	
@@ -237,15 +236,14 @@
         singleGestureStartPoint = [touchOne locationInView:self];
         
         if(tapCount == 1)
-            pinchTimer = [[NSTimer scheduledTimerWithTimeInterval:0.5
+            pinchTimer = [NSTimer scheduledTimerWithTimeInterval:0.5
                                                            target:self
                                                          selector:@selector(ARSingleTapDetected:) 
                                                          userInfo:touchOne
-                                                          repeats:NO] retain];
+                                                          repeats:NO];
         else {
             if(pinchTimer) {
                 [pinchTimer invalidate];
-                [pinchTimer release];
                 pinchTimer = nil;
                 
             }
@@ -256,7 +254,6 @@
     } else if(numberOfTouches == 2) {
         if(pinchTimer) {
             [pinchTimer invalidate];
-            [pinchTimer release];
             pinchTimer = nil;
         }        
         
@@ -410,16 +407,10 @@
 	if([EAGLContext currentContext] == context)
 		[EAGLContext setCurrentContext:nil];
 	
-	[context release];
 	context = nil;
     
-    [mainSubview release];
-    [displayLink release];
     
-    if(pinchTimer)
-        [pinchTimer release];
 	
-	[super dealloc];
 }
 
 @end

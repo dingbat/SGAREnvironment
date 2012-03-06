@@ -217,7 +217,6 @@
     
     free(data);
 	
-	[super dealloc];
 }
 
 

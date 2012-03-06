@@ -73,9 +73,7 @@
 @interface SGARViewController : UIImagePickerController <SGARViewDataSource> {
     
 #endif
- 
-    id<SGARViewControllerDataSource> dataSource;
- 
+  
     SGARView* arView;
 
     NSInteger bucketIndex;
@@ -106,7 +104,7 @@
 * @property
 * @abstract The @link //simplegeo/ooc/cl/SGARViewControllerDataSource data source @/link that populates the @link arView arView @/link.
 */
-@property (nonatomic, assign) id<SGARViewControllerDataSource> dataSource;
+@property (nonatomic, unsafe_unretained) id<SGARViewControllerDataSource> dataSource;
 
 /*!
 * @property

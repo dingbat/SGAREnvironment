@@ -62,7 +62,6 @@
     NSString* reuseIdentifier;
     
     UIImageView* targetImageView;
-    id<SGAnnotationViewDelegate> delegate;
     
     double bearing;
     double distance;
@@ -89,7 +88,7 @@
 * @property
 * @abstract The source of the view's location in the AR enviornment.
 */
-@property (nonatomic, retain) id<MKAnnotation> annotation;
+@property (nonatomic, strong) id<MKAnnotation> annotation;
 
 /*!
 * @property
@@ -102,13 +101,13 @@
 * @abstract The image that is shown when the @link targetType targetType @/link is set to
 * @link kSGAnnotationViewTargetType_Glass kSGAnnotationViewTargetType_Glass @/link.
 */
-@property (nonatomic, retain, readonly) UIImageView* targetImageView;
+@property (nonatomic, strong, readonly) UIImageView* targetImageView;
 
 /*!
 * @property
 * @abstract The delegate that recieves inspection and close notifications.
 */
-@property (nonatomic, assign) id<SGAnnotationViewDelegate> delegate;
+@property (nonatomic, unsafe_unretained) id<SGAnnotationViewDelegate> delegate;
 
 /*!
 * @property
@@ -141,7 +140,7 @@
 * @property
 * @abstract The UIButton that is displayed in the @link //simplegeo/ooc/cl/SGRadar SGRadar @/link.
 */
-@property (nonatomic, readonly) UIButton* radarTargetButton;
+@property (strong, nonatomic, readonly) UIButton* radarTargetButton;
 
 /*!
 * @property
@@ -171,7 +170,7 @@
 * @property
 * @abstract The texture that represents this view.
 */
-@property (nonatomic, readonly) SGTexture* texture;
+@property (strong, nonatomic, readonly) SGTexture* texture;
 
 /*!
 * @property
@@ -186,7 +185,7 @@
 * @link //simplegeo/ooc/cl/SGAnnotationViewContainer SGAnnotationViewContainer @/link when the view
 * has reached the top of the stack.
 */
-@property (nonatomic, retain) UIImage* containerImage;
+@property (nonatomic, strong) UIImage* containerImage;
 
 /*!
 * @method initWithFrame:reuseIdentifier:

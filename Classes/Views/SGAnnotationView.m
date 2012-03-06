@@ -76,7 +76,7 @@
         targetImageView.backgroundColor = [UIColor clearColor];
         [self addSubview:targetImageView];        
         
-        radarTargetButton = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+        radarTargetButton = [UIButton buttonWithType:UIButtonTypeCustom];
         UIImage* targetImage = [UIImage imageNamed:@"SGDefaultRadarTargetImage.png"];
         [radarTargetButton setImage:targetImage forState:UIControlStateNormal];
         radarTargetButton.frame = CGRectMake(0.0, 0.0, targetImage.size.width, targetImage.size.height);
@@ -102,7 +102,6 @@
 - (void) prepareForReuse
 {
     if(texture) {
-        [texture release];
         texture = nil;
     }
     isCaptured = NO;
@@ -111,8 +110,6 @@
 - (SGTexture*) texture
 {
     if(needNewTexture) {
-        if(texture)
-            [texture release];
 
         CGSize size = CGSizeMake(self.bounds.size.width, self.bounds.size.height);
         
@@ -124,7 +121,7 @@
         texture = [[SGTexture alloc] initWithImage:image];
         
         if(!containerImage)            
-            containerImage = [image retain];
+            containerImage = image;
         
         needNewTexture = NO;
     }
@@ -139,15 +136,8 @@
 
 - (void) dealloc 
 {
-    [reuseIdentifier release];
-    [targetImageView release];
-    [radarTargetButton release];    
-    [containerImage release];
     free(point);    
-    [texture release];
-    [radarPointTexture release];
     
-    [super dealloc];
 }
 
 @end

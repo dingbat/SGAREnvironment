@@ -85,7 +85,7 @@
 * @abstract The delegate that is in charge of handling touch
 * events and drawing the OpenGL environment.
 */
-@property(nonatomic, assign) id<SG3DOverlayViewDelegate> delegate;
+@property(nonatomic, unsafe_unretained) id<SG3DOverlayViewDelegate> delegate;
 
 /*!
 * @method startAnimation

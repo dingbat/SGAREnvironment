@@ -216,7 +216,7 @@
     
     self.view.backgroundColor = [UIColor clearColor];
 
-#ifdef __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0
+#if __IPHONE_4_0 && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_4_0
 
     [self.view addSubview:arView];
     [self.view sendSubviewToBack:arView];
